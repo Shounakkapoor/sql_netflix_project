@@ -1,5 +1,7 @@
 # Netflix Movies and TV Shows Data Analysis using SQL
 
+(https://github.com/Shounakkapoor/sql_netflix_project/blob/main/logo%20(1).png)
+
 ## Overview
 This project involves a comprehensive analysis of Netflix's movies and TV shows data using SQL. The goal is to extract valuable insights and answer various business questions based on the dataset. The following README provides a detailed account of the project's objectives, business problems, solutions, findings, and conclusions.
 
@@ -53,8 +55,8 @@ GROUP BY type;
 
 ```sql
 SELECT
-		type,
-		rating
+	type,
+	rating
 FROM
 (SELECT 
 	type,
@@ -231,7 +233,8 @@ WHERE
 SELECT
 	actor,
 	COUNT(*) AS movie_count
-FROM(
+FROM
+(
 SELECT
 	TRIM(UNNEST(STRING_TO_ARRAY(casts,','))) as actor
 FROM netflix_titles
